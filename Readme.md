@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Егор Криворотов](https://up.htmlacademy.ru/adaptive/6/user/56012).
-* Наставник: `Неизвестно`.
+* Наставник: `Евгений Болтян`.
 
 ---
 
