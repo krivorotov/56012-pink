@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="wrapper">
+        <h1 class="page-header__logo">
+          <a href="index.html"><img src="" alt="PINK"></a>
+        </h1>
+        <span class="nav-toggle nav-toggle--closed">Меню</span>
+        <nav class="main-nav">
+          <ul class="main-nav__items">
+            <li class="main-nav__item main-nav__item--active"><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="promo">
+      <div class="promo__container">
+        <h2 class="promo__caption">Конкурс на самое безбашеное путешествие с Пинк</h2>
+      </div>
+    </div>
+    <main class="page-main">
+      <div class="box">
+          <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+          <form action="/echo" method="post">
+            <fieldset class="page-main__form-name">
+              <label for="name-field">Имя:</label>
+              <input type="text" placeholder="Введите ваше имя" id="name-field">
+              <label for="surname-field">Фамилия:</label>
+              <input type="text" placeholder="Укажите фамилию"id="surname-field">
+              <label for="patronymic-field">Фамилия:</label>
+              <input type="text" placeholder="Ну и отчество тоже" id="patronymic-field">
+            </fieldset>
+            <fieldset class="page-main__form-achievments">
+              <legend>Ваши безбашенные достижения в путешествии</legend>
+              <input type="checkbox" checked>Сделал селфи с акулой</input>
+              <input type="checkbox" checked>Обгорел на пляже</input>
+              <input type="checkbox">Видел Чака Норриса</input>
+              <input type="checkbox">Накупил сувениров</input>
+              <input type="checkbox" checked>Удержал башню</input>
+              <input type="checkbox">Разгромил отель</input>
+            </fieldset>
+            <fieldset class="page-main__form-contacts">
+              <label for="tel-field">Номерок телефончика</label>
+              <input type="tel" placeholder="Номер, пожалуйста" id="tel-field">
+              <label for="mail-field">Адресок почты</label>
+              <input type="email" placeholder="E-mail, пожалуйста" id="mail-field">
+            </fieldset>
+            <fieldset class="page-main__form-apps">
+              <legend>С каким приложением путешествовали?</legend>
+              <label><input type="radio" name="app" value="ios" checked>Pink для iOS</label>
+              <label><input type="radio" name="app" value="android">Pink на Android</label>
+              <label><input type="radio" name="app" value="windows">Windows Phone</label>
+            </fieldset>
+            <fieldset class="page-main__form-comment">
+              <legend>Опишите свои эмоции</legend>
+              <textarea name="" id="" cols="30" rows="10">Можно прям в красках, не стесняясь в выражениях</textarea>
+            </fieldset>
+            <input type="submit" value="Отправить форму">
+          </form>
+          <p class="page-main__form-note">* — Обязательные поля</p>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__logo">
+          <a href="index.html"><img src="" alt="PINK"></a>
+      </div>
+      <div class="social">
+        <a class="social__btn social__btn--tw" href="#"><i class="icon-twitter"></i></a>
+        <a class="social__btn social__btn--fb" href="#"><i class="icon-facebook"></i></a>
+        <a class="social__btn social__btn--youtube" href="#"><i class="icon-youtube"></i></a>
+      </div>
+      <div class="copyright">
+        <span>Разработано</span><a class="copyright__htmlacademy" href="http://htmlacademy.ru"><i class="icon-htmlacademy"></i></a>
+      </div>
+    </footer>
+  </body>
+</html>
