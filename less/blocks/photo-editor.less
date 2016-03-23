@@ -1,0 +1,30 @@
+.photo-editor {
+	.container;
+}
+
+.photo-editor img {
+	display: block;
+	width: 100%;
+}
+
+.photo-filters__mode {
+	display: block;
+	margin: 0 auto;
+}
+
+@media @tablet {
+	.photo-editor {
+		.clearfix;
+	}
+
+	.photo-filters {
+		float: right;
+		width: 45%;
+	}
+
+	.photo-editor img {
+		display: block;
+		float: left;
+		width: 45%;
+	}
+}
