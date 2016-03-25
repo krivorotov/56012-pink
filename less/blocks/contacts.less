@@ -1,0 +1,36 @@
+.contacts__caption {
+  text-align: center;
+}
+
+@media @tablet {
+  .contacts__wrapper {
+    .container;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .contacts__list {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .contacts__list--center {
+    margin: 0 auto;
+  }
+}
+
+@media @desktop {
+  .contacts__wrapper {
+    flex-wrap: nowrap;
+  }
+
+  .contact__list--left {
+    order: -2;
+  }
+
+  .contact__list--center {
+    order: -1;
+  }
+}

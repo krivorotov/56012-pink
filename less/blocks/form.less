@@ -1,0 +1,61 @@
+.page-main__form {
+	.container;
+}
+
+@media @tablet {
+	.page-main__form {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+}
+
+.page-main__intro {
+	text-align: center;
+}
+
+.form__title {
+	text-align: center;
+}
+
+.form label {
+	display: block;
+}
+
+.form textarea {
+	width: 100%;
+}
+
+.form-submit {
+	.container;
+	.clearfix;
+}
+
+@media @mobile {
+	.form-submit input[type="submit"] {
+		width: 100%;
+	}
+}
+
+@media @tablet {
+	.form-submit input[type="submit"] {
+		float: left;
+	}
+
+	.form-submit__note {
+		display: block;
+		float: right;
+	}
+}
+
+@media @desktop {
+	.form-name,
+	.form-achievments {
+		width: 50%;
+	}
+}
+
+.popup-fail,
+.popup-success {
+	.popup-width;
+}

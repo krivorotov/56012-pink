@@ -1,0 +1,50 @@
+.price__wrapper {
+	.container;
+	display: flex;
+	flex-direction: column;
+}
+
+.price__wrapper > input {
+	display: none;
+}
+
+#price-radio-1:checked ~ .slider label:nth-of-type(1),
+#price-radio-2:checked ~ .slider label:nth-of-type(2),
+#price-radio-3:checked ~ .slider label:nth-of-type(3) {
+	background: #000000;
+}
+
+@media @tablet {
+	.slider--price > label {
+		display: none;
+	}
+
+	.price__wrapper {
+		flex-direction: row;
+		justify-content: center;
+	}
+}
+
+.price__list {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	list-style: none;
+	width: auto;
+}
+
+@media @mobile {
+	.price__list {
+		order: -1;
+	}
+}
+
+@media @tablet {
+	.price__list {
+		width: 155px;
+	}
+
+	.price__item--feature {
+		display: none;
+	}
+}
