@@ -1,71 +1,255 @@
 .gallery {
-  .container;
+  margin-bottom: 23px;
 }
 
 @media @tablet {
   .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 45px;
   }
+}
 
+@media @desktop {
+  .gallery {
+    margin-bottom: 4px;
+  }
+}
+
+.gallery__wrapper {
+  .container;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gallery__intro {
+  margin: 45px auto 49px auto;
+  padding: 0 14px;
+  font-size: 14px;
+  line-height: 30px;
+  color: #283645;
+  font-weight: normal;
+  text-align: center;
+}
+
+@media @tablet {
+  .gallery__intro {
+    width: 500px;
+    margin: 92px auto 76px auto;
+    font-size: 18px;
+  }
+}
+
+@media @desktop {
+  .gallery__intro {
+    width: 620px;
+    margin-bottom: 88px;
+  }
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+@media @tablet {
   .gallery-item {
-    width: 45%;
-    margin-right: 25px;
-    margin-bottom: 15px;
+    width: 300px;
+    min-height: 454px;
+    margin-bottom: 21px;
   }
 }
 
 @media @desktop {
   .gallery-item {
-    width: 30%;
+    min-height: 553px;
+    margin-bottom: 56px;
   }
 }
 
-.page-main__intro {
-  text-align: center;
+.gallery-item__wrapper {
+  .container;
+}
+
+.gallery-item__wrapper--pan {
+  position: relative;
+}
+
+.gallery-item__wrapper--pan::before {
+  content: "Панорама дня";
+  position: absolute;
+  top: 0;
+  right: 20px;
+  display: block;
+  padding: 6px 20px;
+  font-size: 12px;
+  line-height: 24px;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #d22856;
+}
+
+@media @tablet {
+  .gallery-item__wrapper--pan::before {
+    top: 57px;
+    right: 20px;
+  }
+}
+
+@media @desktop {
+  .gallery-item__wrapper--pan::before {
+    top: 55px;
+    right: 10px;
+  }
+}
+
+.gallery-item--pan {
+  width: 100%;
+}
+
+@media @tablet {
+  .gallery-item--pan {
+    margin-bottom: 50px;
+  }
+
+  .gallery-item--pan .gallery-item__detail {
+    max-width: 440px;
+  }
+
+  .gallery-item--pan .gallery-item__text {
+    order: 1;
+  }
+}
+
+.gallery-item__inner-wrapper {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 18px 5px 19px 18px;
+  background-color: #f2f2f2;
+}
+
+@media @tablet {
+  .gallery-item__inner-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 10px 20px 27px;
+  }
+}
+
+@media @tablet {
+  .gallery-item__inner-wrapper--pan {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 24px;
+  }
+
+  .gallery-item__inner-wrapper--pan .gallery-item__like {
+    margin-top: 0;
+  }
+}
+
+.gallery-item__link {
+  display: block;
+  width: 100%;
 }
 
 .gallery-item__image {
   display: block;
-  text-align: center;
   width: 100%;
+  height: auto;
 }
 
-.gallery-item__image--pan {
-  width: 100%;
+.gallery-item__author {
+  font-size: 14px;
+  line-height: 24px;
+  color: #283645;
+  font-weight: bold;
+  font-style: normal;
 }
 
-.gallery-item__wrapper {
-  width: 100%;
-  margin: 0 auto;
+.gallery-item__time {
+  font-size: 12px;
+  line-height: 24px;
+  color: #283645;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
-.photo-upload button {
+.gallery-item__text {
   width: 100%;
-  border-radius: 10px;
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  line-height: 24px;
+  color: #283645;
+  font-weight: normal;
 }
 
-.photo-upload button[type="submit"] {
-  margin: 12px 0;
+@media @tablet {
+  .gallery-item__text {
+    margin-bottom: auto;
+  }
+}
+
+.gallery-item__like {
+  position: relative;
+  padding-left: 32px;
+  font-size: 12px;
+  line-height: 24px;
+  color: #d22856;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+@media @tablet {
+  .gallery-item__like {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 50px 0 0;
+  }
 }
 
 @media @desktop {
-  .photo-upload {
-    .clearfix;
+  .gallery-item__like {
+    margin: 11px 52px 0 0;
   }
+}
 
-  .photo-upload button {
-    width: 45%;
+.gallery-item__like::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: url("../img/icon-heart.svg") no-repeat;
+  background-size: contain;
+}
+
+@media @tablet {
+  .gallery-item__like::before {
+    left: auto;
+    right: 22px;
   }
+}
 
-  .photo-upload button[type="submit"] {
-    float: left;
-    margin: 0;
+@media @tablet {
+  .gallery-item__like--pan {
+    width: auto;
+    margin-right: 52px;
+    padding: 0;
   }
+}
 
-  .photo-upload button[type="reset"] {
-    float: right;
+@media @tablet {
+  .gallery-item__like--pan::before {
+    top: 5px;
+    left: auto;
+    right: -32px;
   }
 }

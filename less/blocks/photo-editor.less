@@ -1,30 +1,347 @@
 .photo-editor {
-	.container;
+  background-color: #f2f2f2;
 }
 
-.photo-editor img {
-	display: block;
-	width: 100%;
+@media @desktop {
+  .photo-editor {
+    background-color: #ffffff;
+    margin-bottom: 25px;
+  }
 }
 
-.photo-filters__mode {
-	display: block;
-	margin: 0 auto;
+.photo-editor__wrapper {
+  .container;
+}
+
+.photo-editor__wrapper--intro {
+  width: 100%;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.photo-editor__desc {
+  width: 280px;
+  margin: 0 auto;
+  padding-bottom: 42px;
+  font-size: 14px;
+  line-height: 30px;
+  color: #283645;
+  font-weight: normal;
+  text-align: center;
 }
 
 @media @tablet {
-	.photo-editor {
-		.clearfix;
-	}
+  .photo-editor__desc {
+    width: 620px;
+    padding-bottom: 67px;
+    font-size: 18px;
+  }
+}
 
-	.photo-filters {
-		float: right;
-		width: 45%;
-	}
+@media @desktop {
+  .photo-editor__desc {
+    width: 940px;
+    padding-bottom: 65px;
+  }
+}
 
-	.photo-editor img {
-		display: block;
-		float: left;
-		width: 45%;
-	}
+.photo-editor__box {
+  padding: 20px 0 42px 0;
+}
+
+@media @tablet {
+  .photo-editor__box {
+    padding: 61px 0 52px 0;
+  }
+}
+
+@media @desktop {
+  .photo-editor__box {
+    padding: 58px 60px 60px 80px;
+    background-color: #f2f2f2;
+  }
+}
+
+.photo-editor__form {
+  display: flex;
+  flex-direction: column;
+}
+
+@media @tablet {
+  .photo-editor__form {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.toolbar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media @tablet {
+  .toolbar {
+    width: 275px;
+  }
+}
+
+@media @desktop {
+  .toolbar {
+    width: 410px;
+  }
+}
+
+.toolbar__filters {
+  position: relative;
+  display: flex;
+  margin: 0;
+  padding: 42px 19px 108px 19px;
+  list-style: none;
+  justify-content: center;
+}
+
+@media @tablet {
+  .toolbar__filters {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin-top: -18px;
+  }
+}
+
+@media @desktop {
+  .toolbar__filters {
+    width: 410px;
+  }
+}
+
+.toolbar__filter {
+  display: flex;
+  margin: 0 auto;
+}
+
+@media @tablet {
+  .toolbar__filter {
+    width: 100%;
+    height: 72px;
+    align-items: center;
+  }
+}
+
+.toolbar__pic {
+  width: 47px;
+  height: 47px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media @tablet {
+  .toolbar__pic {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    background-size: 25px 25px;
+  }
+}
+
+@media @desktop {
+  .toolbar__pic {
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+  }
+}
+
+@media @mobile {
+  .toolbar__filter--active .toolbar__pic--crop,
+  .toolbar__filter--active .toolbar__pic--crop:hover {
+    background-image: url("../img/icon-editor-crop-pink.svg");
+    cursor: default;
+  }
+
+  .toolbar__filter--active .toolbar__pic--fill,
+  .toolbar__filter--active .toolbar__pic--fill:hover {
+    background-image: url("../img/icon-editor-fill-pink.svg");
+    cursor: default;
+  }
+
+  .toolbar__filter--active .toolbar__pic--contrast,
+  .toolbar__filter--active .toolbar__pic--contrast:hover {
+    background-image: url("../img/icon-editor-contrast-pink.svg");
+    cursor: default;
+  }
+}
+
+.toolbar__pic--crop {
+  background-image: url("../img/icon-editor-crop.svg");
+}
+
+@media @mobile {
+  .toolbar__pic--crop:hover {
+    background-image: url("../img/icon-editor-crop-hover.svg");
+    cursor: pointer;
+  }
+}
+
+@media @tablet {
+  .toolbar__pic--crop {
+    background-image: url("../img/icon-editor-crop-pink.svg");
+  }
+}
+
+@media @desktop {
+  .toolbar__pic--crop {
+    background-position: top 2px left -3px;
+  }
+}
+
+.toolbar__pic--fill {
+  background-image: url("../img/icon-editor-fill.svg");
+}
+
+@media @mobile {
+  .toolbar__pic--fill:hover {
+    background-image: url("../img/icon-editor-fill-hover.svg");
+    cursor: pointer;
+  }
+}
+
+@media @tablet {
+  .toolbar__pic--fill {
+    background-image: url("../img/icon-editor-fill-pink.svg");
+  }
+}
+
+@media @desktop {
+  .toolbar__pic--fill {
+    background-position: top 5px left;
+  }
+}
+
+.toolbar__pic--contrast {
+  background-image: url("../img/icon-editor-contrast.svg");
+}
+
+@media @mobile {
+  .toolbar__pic--contrast:hover {
+    background-image: url("../img/icon-editor-contrast-hover.svg");
+    cursor: pointer;
+  }
+}
+
+@media @tablet {
+  .toolbar__pic--contrast {
+    background-image: url("../img/icon-editor-contrast-pink.svg");
+    background-size: 18px 18px;
+  }
+}
+
+@media @desktop {
+  .toolbar__pic--contrast {
+    background-size: 32px 32px;
+    background-position: top 10px left 6px;
+  }
+}
+
+.toolbar__range {
+  display: none;
+  width: 320px;
+  box-sizing: border-box;
+  padding: 0 40px;
+}
+
+@media @tablet {
+  .toolbar__range {
+    display: block;
+    width: auto;
+    margin-left: 4px;
+    padding: 0 18px;
+    flex-grow: 1;
+  }
+}
+
+@media @desktop {
+  .toolbar__range {
+    margin-left: 7px;
+    padding: 0 30px;
+  }
+}
+
+.toolbar__filter--active .toolbar__range {
+  position: absolute;
+  top: 125px;
+  left: -20px;
+  display: block;
+}
+
+@media @tablet {
+  .toolbar__filter--active .toolbar__range {
+    position: static;
+  }
+}
+
+.toolbar__line {
+  position: relative;
+  height: 2px;
+  background-color: #283645;
+}
+
+.toolbar__point {
+  position: absolute;
+  top: -6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  border: 2px solid #d22856;
+}
+
+.toolbar__point:hover {
+  cursor: pointer;
+}
+
+.toolbar__point:active {
+  background-color: #d22856;
+}
+
+.toolbar__filter--active .toolbar__range::after {
+  content: "";
+  position: absolute;
+  top: 38px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #dddfe0;
+}
+
+@media @tablet {
+  .toolbar__filter--active .toolbar__range::after {
+    display: none;
+  }
+}
+
+.toolbar__buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 122px;
+}
+
+@media @tablet {
+  .toolbar__buttons {
+    min-height: 137px;
+  }
+}
+
+@media @desktop {
+  .toolbar__buttons {
+    flex-direction: row;
+    align-items: flex-end;
+    width: 410px;
+    min-height: 104px;
+  }
 }
