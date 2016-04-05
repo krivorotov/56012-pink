@@ -1,0 +1,150 @@
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+
+.popup-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  margin-left: -160px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+}
+
+@media @tablet {
+  .popup-item {
+    margin-left: -230px;
+  }
+}
+
+.popup__wrapper {
+  width: 280px;
+  padding: 20px;
+  text-align: center;
+}
+
+@media @tablet {
+  .popup__wrapper {
+    width: 320px;
+    padding: 0 70px;
+  }
+}
+
+.popup__caption {
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: bold;
+}
+
+@media @tablet {
+  .popup__caption {
+    width: 260px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.popup__text {
+  font-size: 14px;
+  line-height: 24px;
+  color: #283645;
+  font-weight: 400;
+}
+
+@media @tablet {
+  .popup__text {
+    font-size: 18px;
+  }
+}
+
+.popup__btn-box--close {
+  background-color: #f2f2f2;
+}
+
+.popup-item--fail .popup__caption {
+  margin: 21px auto 26px;
+}
+
+.popup-item--fail .popup__text {
+  margin-bottom: 0px;
+}
+
+.popup-item--fail .popup__btn-box {
+  padding: 18px 20px 52px;
+}
+
+@media @tablet {
+  .popup-item--fail .popup__caption {
+    margin: 38px auto 21px;
+  }
+
+  .popup-item--fail .popup__text {
+    margin: 0 auto 19px;
+  }
+
+  .popup-item--fail .popup__btn-box {
+    padding: 20px auto 62px;
+  }
+}
+
+.popup-item--success .popup__caption {
+  margin: 20px 0 26px 0;
+}
+
+.popup-item--success .popup__text {
+  margin: 0 0 13px 0;
+}
+
+.popup-item--success .popup__btn-box {
+  padding: 45px 20px 53px;
+}
+
+@media @tablet {
+  .popup-item--success .popup__caption {
+    margin: 38px auto 22px;
+  }
+
+  .popup-item--success .popup__text {
+    margin: 0 auto 36px;
+  }
+}
+
+@media @desktop {
+  .popup-item--success {
+    margin-left: -390px;
+  }
+
+  .popup-item--success .popup__wrapper {
+    width: 460px;
+    padding: 0 160px;
+  }
+
+  .popup-item--success .popup__caption {
+    width: 460px;
+    margin: 42px 0 22px 0;
+  }
+
+  .popup-item--success .popup__text {
+    margin: 0 auto 40px;
+  }
+
+  .popup-item--success .popup__btn-box {
+    width: 460px;
+    padding: 46px 160px 53px;
+  }
+}
+
+.popup--show {
+  display: block;
+}

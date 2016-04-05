@@ -1,56 +1,458 @@
 .page-header {
-    .container;
+    background-image: url("../img/bg-back-mobile.jpg");
+    background-size: 700px auto;
+    background-color: #1d2631;
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    @media
+        (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+            .page-header {
+                background-image: url("../img/bg-back-mobile@2x.jpg");
+            }
+        }
 }
 
-.page-header > .wrapper {
-    .clearfix;
+@media @tablet {
+    .page-header {
+        background-image: url("../img/bg-back-tablet@1x.jpg");
+        background-size: 1200px auto;
+    }
+
+    @media
+        (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+            .page-header {
+                background-image: url("../img/bg-back-tablet@2x.jpg");
+            }
+        }
+}
+
+@media @desktop {
+    .page-header {
+        background-image: url("../img/bg-back-desktop.jpg");
+        background-size: 2560px auto;
+    }
+}
+
+.page-header--main {
+    background-image: url("../img/iphone-hand-mobile.png"), url("../img/bg-back-mobile.jpg");
+    background-size: 258px auto, 700px auto;
+    background-repeat: no-repeat;
+    background-position: left 175px, top center;
+}
+
+@media
+    (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+        .page-header--main {
+            background-image: url("../img/iphone-hand-mobile@2x.png"), url("../../img/bg-back-mobile@2x.jpg");
+        }
+    }
+
+@media @tablet {
+    .page-header--main {
+        background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
+        background-size: 700px auto, 1200px auto;
+        background-position: bottom center, top center;
+    }
+
+    @media
+        (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+            .page-header--main {
+                background-image: url("../img/iphone-hand-tablet@2x.png"), url("../img/bg-back-tablet@2x.jpg");
+            }
+        }
+}
+
+@media @desktop {
+    .page-header--main {
+        background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop.jpg");
+        background-size: 1050px auto, 2560px auto;
+        background-position: bottom center, top center;
+    }
+
+    @media
+        (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+            .page-header--main {
+                background-image: url("../img/iphone-hand-desktop@2x.png"), url("../img/bg-back-desktop.jpg");
+            }
+        }
+}
+
+.page-header--inner {
+    min-height: 237px;
+}
+
+@media @tablet {
+    .page-header--inner {
+        min-height: 440px;
+    }
+}
+
+@media @desktop {
+    .page-header--inner {
+        min-height: 394px;
+    }
+}
+
+
+
+.page-header__top {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+@media @tablet {
+    .page-header__top {
+        margin-bottom: 94px;
+    }
+}
+
+@media @desktop {
+    .page-header__top {
+        margin-bottom: 108px;
+    }
+}
+
+.page-header__top--inner {
+    margin-bottom: 30px;
+}
+
+@media @tablet {
+    .page-header__top--inner {
+        margin-bottom: 70px;
+    }
+}
+
+@media @desktop {
+    .page-header__top--inner {
+        margin-bottom: 64px;
+    }
+}
+
+.page-header__wrapper {
+    .container;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 66px;
+}
+
+@media @tablet {
+    .page-header__wrapper {
+        min-height: 110px;
+    }
+}
+
+@media @desktop {
+    .page-header__wrapper {
+        min-height: 55px;
+        padding-top: 27px;
+        padding-bottom: 27px;
+    }
 }
 
 .page-header__logo {
-    float: left;
-    height: 25px;
-    width: 80px;
+    position: relative;
+    z-index: 1;
+    width: 75px;
+    height: 50px;
+    overflow: hidden;
+    margin: 0;
+    font-size: 16px;
 }
 
-.page_header a {
-    display: block;
+@media @tablet {
+    .page-header__logo {
+        top: -5px;
+        width: 150px;
+    }
 }
 
-.main-nav {
+.page-header__logo svg {
+    position: absolute;
+    right: 0;
+}
+
+@media @tablet {
+    .page-header__logo svg {
+        right: 3px;
+    }
+}
+
+.page-header__img--tablet {
     display: none;
 }
 
+@media @desktop {
+    .page-header__img--tablet {
+        display: block;
+    }
+}
+
+.page-header__img--tablet-only {
+    display: none;
+}
+
+@media @tablet {
+    .page-header__img--tablet-only {
+        display: block;
+    }
+}
+
+@media @desktop {
+    .page-header__img--tablet-only {
+        display: none;
+    }
+}
+
+.page-header__img--desktop {
+    display: none;
+}
+
+@media @desktop {
+    .page-header__img--desktop {
+        display: block;
+    }
+}
+
+.page-header__logo:not(.page-header__logo--main):hover path {
+    fill: #d22856;
+}
+
+.page-header__logo:not(.page-header__logo--main):active path {
+    opacity: 0.3;
+}
+
+.page-header__logo:active path:not(.page-header__logo--pink) {
+    fill: #ffffff;
+}
+
 .main-nav__toggle {
-    float: right;
+    display: block;
+    width: 50px;
+    height: 25px;
+    font-size: 0;
+}
+
+@media @tablet {
+    .main-nav__toggle {
+        top: 44px;
+    }
 }
 
 @media @desktop {
     .main-nav__toggle {
         display: none;
-        float: none;
     }
+}
 
+.main-nav__toggle::before,
+.main-nav__toggle::after {
+    content: "";
+    position: relative;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff;
+}
+
+.main-nav__toggle::before {
+    top: 0;
+    box-shadow: 0 10px 0 0 #ffffff;
+}
+
+.main-nav__toggle::after {
+    bottom: 4px;
+}
+
+.main-nav__toggle--close {
+    top: 20px;
+    right: 18px;
+    z-index: 1;
+    display: block;
+    width: 25px;
+    height: 25px;
+}
+
+@media @tablet {
+    .main-nav__toggle--close {
+        top: 43px;
+    }
+}
+
+@media @desktop {
+    .main-nav__toggle--close {
+        display: none;
+    }
+}
+
+.main-nav__toggle--close::before,
+.main-nav__toggle--close::after {
+    content: "";
+    left: -3px;
+    z-index: 1;
+    width: 30px;
+    height: 4px;
+    background-color: #ffffff;
+}
+
+.main-nav__toggle--close::before {
+    transform: rotate(45deg);
+    top: 11px;
+    box-shadow: none;
+}
+
+.main-nav__toggle--close::after {
+    transform: rotate(-45deg);
+    top: -13px;
+}
+
+.main-nav__toggle:hover::before,
+.main-nav__toggle:hover::after {
+    background-color: #d22856;
+}
+
+.main-nav__toggle:hover::before {
+    box-shadow: 0 10px 0 0 #d22856;
+}
+
+.main-nav__toggle--close:hover::before {
+    box-shadow: none;
+}
+
+.main-nav__toggle:active::before,
+.main-nav__toggle:active::after {
+    background-color: #5d354e;
+}
+
+.main-nav__toggle:active::before {
+    box-shadow: 0 10px 0 0 #5d354e;
+}
+
+.main-nav__toggle--close:active::before {
+    box-shadow: none;
+}
+
+.main-nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 70px;
+    background-color: #283645;
+}
+
+@media @tablet {
+    .main-nav {
+        padding-top: 110px;
+    }
+}
+
+@media @desktop {
     .main-nav {
         display: block;
-    }
-
-    .main-nav__items {
-        float: right;
-        padding: 0;
+        position: static;
+        width: 620px;
         margin: 0;
-        list-style: none;
-        text-align: center;
-        width: 790px;
+        padding: 0;
+        background-color: transparent;
     }
+}
 
+.main-nav--show {
+    display: block;
+}
+
+.main-nav__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid #000000;
+}
+
+@media @desktop {
+    .main-nav__items {
+        position: static;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0;
+        border: none;
+    }
+}
+
+.main-nav__item {
+    border-top: 1px solid #485461;
+    border-bottom: 1px solid #000000;
+}
+
+@media @desktop {
     .main-nav__item {
-        display: inline-block;
-        vertical-align: top;
+        border: none;
+    }
+}
+
+.main-nav__link {
+    display: block;
+    height: 62px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 62px;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+@media @desktop {
+    .main-nav__link {
+        position: relative;
+        height: auto;
+        line-height: 24px;
+        font-weight: normal;
+        text-transform: none;
+    }
+}
+
+.main-nav__link:hover:not(.main-nav__link--active) {
+    color: #d22856;
+}
+
+@media @desktop {
+    .main-nav__link:hover:not(.main-nav__link--active) {
+        color: #ffffff;
     }
 
-    .main-nav__item a {
+    .main-nav__link:hover:not(.main-nav__link--active)::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 0;
         display: block;
-        text-align: center;
-        text-decoration: none;
+        width: 100%;
+        height: 2px;
+        background-color: #ffffff;
+    }
+}
+
+.main-nav__link:active:not(.main-nav__link--active) {
+    color: #5d354e;
+}
+
+@media @desktop {
+    .main-nav__link:active:not(.main-nav__link--active) {
+        color: rgba(255, 255, 255, 0.3);
+    }
+
+    .main-nav__link:active:not(.main-nav__link--active)::after {
+        display: none;
     }
 }
