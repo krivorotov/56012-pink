@@ -1,12 +1,12 @@
 .price {
   background-color: #f2f2f2;
-}
 
-.price::before {
-  content: "";
-  display: block;
-  height: 27px;
-  background-image: linear-gradient(to right bottom, #ffffff 50%, #f2f2f2 50%);
+  &::before {
+    content: "";
+    display: block;
+    height: 27px;
+    background-image: linear-gradient(to right bottom, #ffffff 50%, #f2f2f2 50%);
+  }
 }
 
 @media @tablet {
@@ -55,15 +55,15 @@
   border-radius: 50%;
   background-color: rgba(40, 54, 69, 0.3);
   border: 3px solid #f2f2f2;
-}
 
-.price__switch-point:hover {
-  cursor: pointer;
-  background-color: rgba(40, 54, 69, 0.6);
-}
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(40, 54, 69, 0.6);
+  }
 
-.price__switch-point:active {
-  background-color: rgba(40, 54, 69, 0.1);
+  &:active {
+    background-color: rgba(40, 54, 69, 0.1);
+  }
 }
 
 .price__switcher1:checked ~ .price__switch-points .price__switch-point--1,
@@ -149,16 +149,29 @@
   position: relative;
   padding-left: 38px;
   padding-right: 38px;
-}
 
-.price__item--hit::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -2px;
-  width: 70px;
-  height: 70px;
-  background-image: linear-gradient(135deg, transparent 23%, #d22856 23%, #d22856 50%, transparent 50%);
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 70px;
+    height: 70px;
+    background-image: linear-gradient(135deg, transparent 23%, #d22856 23%, #d22856 50%, transparent 50%);
+  }
+
+  &::after {
+    content: "ХИТ";
+    position: absolute;
+    top: 18px;
+    left: 10px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ffffff;
+    font-weight: normal;
+    text-transform: uppercase;
+    transform: rotate(-45deg);
+  }
 }
 
 @media @tablet {
@@ -176,19 +189,6 @@
     height: 75px;
     background-image: linear-gradient(135deg, transparent 23%, #d22856 23%, #d22856 50%, transparent 50%);
   }
-}
-
-.price__item--hit::after {
-  content: "ХИТ";
-  position: absolute;
-  top: 18px;
-  left: 10px;
-  font-size: 14px;
-  line-height: 18px;
-  color: #ffffff;
-  font-weight: normal;
-  text-transform: uppercase;
-  transform: rotate(-45deg);
 }
 
 @media @tablet {

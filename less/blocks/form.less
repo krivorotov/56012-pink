@@ -26,10 +26,10 @@
     width: 500px;
     margin: 0 auto 70px auto;
     font-size: 18px;
-  }
 
-  .form__intro::after {
-    content: "Пожалуйста, заполните форму ниже:";
+    &::after {
+      content: "Пожалуйста, заполните форму ниже:";
+    }
   }
 }
 
@@ -111,6 +111,15 @@
   font-weight: normal;
   border: 2px solid #e5e5e5;
   border-radius: 2px;
+
+  &:hover {
+    border: 2px solid #283645;
+  }
+
+  &:focus {
+    border: 2px solid #d22856;
+    outline: none;
+  }
 }
 
 @media @tablet {
@@ -121,23 +130,8 @@
   }
 }
 
-.form__item:hover {
-  border: 2px solid #283645;
-}
-
-.form__item:focus {
-  border: 2px solid #d22856;
-  outline: none;
-}
-
-::-webkit-input-placeholder {
-  color: #283645;
-}
-
-:-ms-input-placeholder {
-  color: #283645;
-}
-
+::-webkit-input-placeholder,
+:-ms-input-placeholder,
 ::-moz-placeholder {
   color: #283645;
 }
@@ -237,6 +231,32 @@
 
 .form__option--radio {
   margin-bottom: 35px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0px;
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 2px solid #e5e5e5;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    &::before {
+      border: 2px solid #283645;
+      cursor: pointer;
+    }
+  }
+
+  &:active::before {
+    border: 2px solid #d22856;
+  }
 }
 
 @media @desktop {
@@ -245,37 +265,11 @@
   }
 }
 
-.form__option--radio::before {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: 0px;
-  display: block;
-  width: 35px;
-  height: 35px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  border: 2px solid #e5e5e5;
-}
-
 @media @tablet {
   .form__option--radio::before {
     top: -3px;
     left: 0;
   }
-}
-
-.form__option--radio:hover {
-  cursor: pointer;
-}
-
-.form__option--radio:hover::before {
-  border: 2px solid #283645;
-  cursor: pointer;
-}
-
-.form__option--radio:active::before {
-  border: 2px solid #d22856;
 }
 
 .form__radio:checked + .form__option--radio::after,
@@ -620,16 +614,16 @@
   color: #283645;
   font-weight: normal;
   text-transform: uppercase;
+
+  &::after {
+    content: "поля";
+  }
 }
 
 .form__required-field sup {
   font-size: 14px;
   line-height: 30px;
   color: #d22856;
-}
-
-.form__required-field::after {
-  content: "поля";
 }
 
 @media @desktop {
@@ -649,25 +643,25 @@
   background-color: #2aab6d;
   border: none;
   border-radius: 3px;
+
+  &:hover {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #1c9b5e;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
 }
 
 @media @tablet {
   .form-btn {
     width: 300px;
   }
-}
-
-.form-btn:hover {
-  background-color: #1c9b5e;
-}
-
-.form-btn:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #1c9b5e;
-}
-
-.form-btn:disabled {
-  background-color: #e5e5e5;
 }
 
 @media @desktop {

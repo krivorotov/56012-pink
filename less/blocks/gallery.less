@@ -73,21 +73,21 @@
 
 .gallery-item__wrapper--pan {
   position: relative;
-}
 
-.gallery-item__wrapper--pan::before {
-  content: "Панорама дня";
-  position: absolute;
-  top: 0;
-  right: 20px;
-  display: block;
-  padding: 6px 20px;
-  font-size: 12px;
-  line-height: 24px;
-  color: #ffffff;
-  font-weight: bold;
-  text-transform: uppercase;
-  background-color: #d22856;
+  &::before {
+    content: "Панорама дня";
+    position: absolute;
+    top: 0;
+    right: 20px;
+    display: block;
+    padding: 6px 20px;
+    font-size: 12px;
+    line-height: 24px;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #d22856;
+  }
 }
 
 @media @tablet {
@@ -203,6 +203,18 @@
   font-weight: normal;
   text-transform: uppercase;
   text-decoration: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url("../img/icon-heart.svg") no-repeat;
+    background-size: contain;
+  }
 }
 
 @media @tablet {
@@ -210,6 +222,11 @@
     width: 100%;
     box-sizing: border-box;
     padding: 0 50px 0 0;
+
+    &::before {
+      left: auto;
+      right: 22px;
+    }
   }
 }
 
@@ -219,37 +236,16 @@
   }
 }
 
-.gallery-item__like::before {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 0;
-  display: block;
-  width: 14px;
-  height: 14px;
-  background: url("../img/icon-heart.svg") no-repeat;
-  background-size: contain;
-}
-
-@media @tablet {
-  .gallery-item__like::before {
-    left: auto;
-    right: 22px;
-  }
-}
-
 @media @tablet {
   .gallery-item__like--pan {
     width: auto;
     margin-right: 52px;
     padding: 0;
-  }
-}
 
-@media @tablet {
-  .gallery-item__like--pan::before {
-    top: 5px;
-    left: auto;
-    right: -32px;
+    &::before {
+      top: 5px;
+      left: auto;
+      right: -32px;
+    }
   }
 }
